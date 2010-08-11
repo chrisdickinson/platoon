@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+var sys = require('sys'),
+    platoon = require('platoon'),
+    tests = null;
+require.paths.push(process.cwd());
+
+if(process.argv.length > 2) {
+    tests = require(process.argv.slice(-1)[0].replace(/\.(js|coffee)$/g, '')); 
+} else {
+    try { 
+        tests = require('tests');
+    } catch(err) {
+        try {
+            tests = require('tests/tests');
+        } catch(err) {
+        } 
+    }
+}
+ 
+if(tests) {
+    platoon.runTests(tests);
+} else {
+    sys.puts('Could not find any tests.js (or tests/tests.js) in '+process.cwd());
+}

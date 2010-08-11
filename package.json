@@ -1,0 +1,19 @@
+{
+    "name": "platoon",
+    "version":"0.0.1",
+    "description": "A javascript asynchronous testing framework",
+    "keywords": [ 
+        "unit",
+        "test"
+    ],
+    "author":"Chris Dickinson",
+    "directories": {"lib": "./lib" },
+    "main": "./lib/main",
+    "bin":{
+        "platoon":"./bin/platoon"
+    },
+    "license": [
+        "New BSD License"
+    ]
+}
+
