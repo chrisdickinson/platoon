@@ -25,13 +25,15 @@ This should seem (mostly) very familiar to you if you've used any other Javascri
         tearDown:function(callback) {
             callback();
         },
-    },  function(assert) {
+    },
+    function(assert) {
         "The name of this particular test item";
         assert.equal(0, 0);
         assert.throws(Error, function() {
             throw new Error();
         });
-    },  function(assert) {
+    },
+    function(assert) {
         "The name of another test item";
         var Actor = function() {},
             garyBusey = new Actor();
