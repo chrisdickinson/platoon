@@ -228,5 +228,54 @@ exports.AssertionTests = unit({},
             assert.equal(assertion.failures.length, 2);
             assert.equal(assertion.passes.length, 1);
         }));
+    },
+    function(assert) {
+        "Assert that `deepEqual` works as expected";
+        var random_name = "rand-"+Math.random(),
+            object1 = {
+                arr:[1,2,3],
+                thing:1,
+                label:"asdf",
+                obj:{
+                    asdf:1,
+                    innerObj:{
+                        haha:1
+                    }
+                }
+            },
+            object2 = {
+                arr:[1,2,3],
+                thing:1,
+                label:"asdf",
+                obj:{
+                    asdf:1,
+                    innerObj:{
+                        haha:1
+                    }
+                }
+            },
+            object3 = {
+                arr:[1,2,3],
+                thing:1,
+                label:"asdf",
+                obj:{
+                    asdf:1,
+                    innerObj:{
+                        haha:2
+                    }
+                }
+            },
+            assertion = new AssertionSet(random_name, function(_assert) {
+                // should pass
+                _assert.deepEqual(object1, object2);
+
+                // should fail
+                _assert.deepEqual(object1, object3);
+
+            });
+        assertion.execute(assert.async(function() {
+            assert.equal(assertion.failures.length, 1);
+            assert.equal(assertion.passes.length, 1);
+        }));
     }
 );
