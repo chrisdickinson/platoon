@@ -1,16 +1,18 @@
 {
     "name": "platoon",
-    "version":"0.0.3",
+    "version":"0.0.4",
     "description": "A javascript asynchronous testing framework",
     "keywords": [ 
         "unit",
         "test"
     ],
     "author":"Chris Dickinson",
+    "dependencies":{"plate":"0.0.1"},
     "directories": {"lib": "./lib" },
     "main": "./lib/main",
     "bin":{
-        "platoon":"./bin/platoon"
+        "platoon":"./bin/platoon",
+        "platoon_browser":"./bin/platoon_browser"
     },
     "license": [
         "New BSD License"
