@@ -10,7 +10,11 @@ fs.readFile(filename, function(err, data) {
         sys.puts("Could not find "+filename);
     } else {
         var json = JSON.parse(data.toString());
-        http.createServer(platoon.server(json)).listen(8124);
+        try {
+            http.createServer(platoon.server(json)).listen(8124);
+        } catch(err) {
+            sys.puts(err);
+        }
     }
 });
 
