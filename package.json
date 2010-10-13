@@ -7,9 +7,8 @@
         "test"
     ],
     "author":"Chris Dickinson",
-    "dependencies":{"plate":"0.0.1"},
     "directories": {"lib": "./lib" },
-    "main": "./lib/main",
+    "main": "./lib/index",
     "bin":{
         "platoon":"./bin/platoon",
         "platoon_browser":"./bin/platoon_browser"
