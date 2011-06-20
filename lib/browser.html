@@ -24,9 +24,9 @@
         </div>
         <script type="text/javascript">
             setupEnvironment = function() {
-                window.require = function(what) {
+                window.require = function(file) {
                     var part = window;
-                    what = what.replace(/\//g, '.').split('.');
+                    var what = file.replace(/\//g, '.').split('.');
                     while(what.length) {
                         part = part[what.shift()];
                     }
