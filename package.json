@@ -1,6 +1,6 @@
 {
     "name": "platoon",
-    "version":"0.0.8",
+    "version":"0.0.9",
     "description": "A javascript asynchronous testing framework",
     "keywords": [ 
         "unit",
@@ -9,7 +9,7 @@
     "author":"Chris Dickinson",
     "directories": {"lib": "./lib" },
     "main": "./lib/index",
-    "dependencies": {"tracejs":"0.1.X", "bunker":"0.X.X", "nopt":"0.X.X"},
+    "dependencies": {"tracejs":"0.1.X", "runforcover":"0.X.X", "nopt":"1.X.X"},
     "bin":{
         "platoon":"./bin/platoon",
         "platoon_browser":"./bin/platoon_browser"
