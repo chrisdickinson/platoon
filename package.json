@@ -1,6 +1,6 @@
 {
     "name": "platoon",
-    "version":"0.0.12",
+    "version":"0.0.13",
     "description": "A javascript asynchronous testing framework",
     "keywords": [ 
         "unit",
@@ -11,8 +11,7 @@
     "main": "./lib/index",
     "dependencies": {"tracejs":"0.1.X", "nopt":"1.X.X"},
     "bin":{
-        "platoon":"./bin/platoon",
-        "platoon_browser":"./bin/platoon_browser"
+        "platoon":"./bin/platoon"
     },
     "license": [
         "New BSD License"
