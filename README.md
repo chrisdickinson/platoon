@@ -19,10 +19,10 @@ This should seem (mostly) very familiar to you if you've used any other Javascri
     var platoon = require('platoon');
 
     exports.ExampleTest = platoon.unit({
-        setUp:function(callback) {
+        setup:function(callback) {
             callback();
         },
-        tearDown:function(callback) {
+        teardown:function(callback) {
             callback();
         },
     },
